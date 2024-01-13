@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://btq3scx407xv6"]
+
+[ext_resource type="PackedScene" uid="uid://ctm8tswth4xtk" path="res://Environment/Platforms/Ground.tscn" id="1_0ed2x"]
+[ext_resource type="PackedScene" uid="uid://dxw4kpmpqm3ha" path="res://Environment/Platforms/Grass.tscn" id="2_1g1yg"]
+[ext_resource type="PackedScene" uid="uid://cedvsie0gaiy8" path="res://Characters/Player.tscn" id="3_7fs2x"]
+[ext_resource type="PackedScene" uid="uid://djkta40mqxatv" path="res://Environment/Level Requirements/Level Exit.tscn" id="4_ojhcq"]
+
+[node name="Level1-2" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_0ed2x")]
+position = Vector2(400, 404)
+
+[node name="Ground2" parent="." instance=ExtResource("2_1g1yg")]
+position = Vector2(54, 626)
+scale = Vector2(100, 1)
+
+[node name="LevelExit" parent="." instance=ExtResource("4_ojhcq")]
+position = Vector2(-50, 546)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_7fs2x")]
+position = Vector2(134, 375)

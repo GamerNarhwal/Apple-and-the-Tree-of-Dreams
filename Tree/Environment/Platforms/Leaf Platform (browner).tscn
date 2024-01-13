@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf42c8g4s50pw"]
+
+[ext_resource type="Texture2D" uid="uid://ckxkcfogv5iu6" path="res://Sprites/leaf platform v3.png" id="1_qsh77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5rse"]
+size = Vector2(255, 61)
+
+[node name="Ground" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_l5rse")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_qsh77")

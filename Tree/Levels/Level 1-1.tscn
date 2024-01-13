@@ -1,0 +1,323 @@
+[gd_scene load_steps=14 format=3 uid="uid://cabpn07wn3kcf"]
+
+[ext_resource type="PackedScene" uid="uid://cedvsie0gaiy8" path="res://Characters/Player.tscn" id="1_2fvrs"]
+[ext_resource type="PackedScene" uid="uid://bpud4yi78bef4" path="res://Environment/Platforms/Tree.tscn" id="3_uc1s1"]
+[ext_resource type="PackedScene" uid="uid://djkta40mqxatv" path="res://Environment/Level Requirements/Level Exit.tscn" id="7_s8qcu"]
+[ext_resource type="PackedScene" uid="uid://cf42c8g4s50pw" path="res://Environment/Platforms/Leaf Platform (browner).tscn" id="8_57odj"]
+[ext_resource type="PackedScene" uid="uid://cuepsoqd0rf8g" path="res://Environment/Platforms/Berry Platform (Light Blue).tscn" id="8_rc7hc"]
+[ext_resource type="PackedScene" uid="uid://bqmp60kigudkr" path="res://Environment/Damagable Environment/Wind.tscn" id="9_iuqw0"]
+[ext_resource type="PackedScene" uid="uid://ctm8tswth4xtk" path="res://Environment/Platforms/Ground.tscn" id="9_jk7jr"]
+[ext_resource type="PackedScene" uid="uid://dfiqpcr8tgk5m" path="res://Environment/Platforms/Berry Platform (Magenta).tscn" id="9_m4i53"]
+[ext_resource type="PackedScene" uid="uid://n2tpfh4us2p7" path="res://Characters/Zombie Apple.tscn" id="10_gjdbf"]
+[ext_resource type="PackedScene" uid="uid://bmer55hxohub8" path="res://Environment/Damagable Environment/Water.tscn" id="11_3ne07"]
+[ext_resource type="PackedScene" uid="uid://dt8d3n5ncw7lv" path="res://Environment/Platforms/Leave Platform (Lighter).tscn" id="11_ok47l"]
+[ext_resource type="PackedScene" uid="uid://bp54dqccpv4rm" path="res://Environment/Platforms/Dirt.tscn" id="12_ylx4m"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yj8or"]
+a = Vector2(-15.0769, -15.7426)
+b = Vector2(-17.8218, 15.7556)
+
+[node name="TestArea" type="Node2D"]
+position = Vector2(23, 18)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -9187.0
+offset_top = -4896.0
+offset_right = 1944.0
+offset_bottom = 2461.0
+color = Color(0.529412, 0.807843, 0.980392, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1, 1)
+offset_left = -801.0
+offset_top = -4871.0
+offset_right = 823.0
+offset_bottom = 2217.0
+color = Color(0.411765, 0.294118, 0.215686, 1)
+
+[node name="LevelExit" parent="." instance=ExtResource("7_s8qcu")]
+position = Vector2(-507, -3115)
+
+[node name="Floor" type="Node2D" parent="."]
+position = Vector2(-858, 522)
+
+[node name="Node2D" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-1877, 4)
+
+[node name="Node2D7" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-1739, 5)
+
+[node name="Node2D4" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-3709, 21)
+
+[node name="Node2D5" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-3985, 21)
+
+[node name="Node2D6" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-4219, 21)
+
+[node name="Node2D8" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-4349, 21)
+
+[node name="Node2D2" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(1843, 3)
+rotation = -6.28319
+
+[node name="Node2D3" parent="Floor" instance=ExtResource("9_jk7jr")]
+position = Vector2(-675, -3)
+rotation = -6.28319
+
+[node name="Dirt" parent="Floor" instance=ExtResource("12_ylx4m")]
+position = Vector2(-3439, 27)
+scale = Vector2(100, 1)
+
+[node name="Environment" type="Node2D" parent="."]
+position = Vector2(-2, 626)
+scale = Vector2(100, 5)
+
+[node name="Ground5" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(-43.87, -41)
+scale = Vector2(0.01, 2)
+
+[node name="Ground40" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(-35.56, -41.8)
+scale = Vector2(0.01, 2)
+
+[node name="CollisionShape2D" parent="Environment/Ground40/StaticBody2D" index="0"]
+disabled = true
+
+[node name="Ground38" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(-24.24, -41.4)
+scale = Vector2(0.01, 2)
+
+[node name="Ground53" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(-26.77, -41.6)
+rotation = 0.0785398
+scale = Vector2(0.01, 2)
+
+[node name="CollisionShape2D" parent="Environment/Ground53/StaticBody2D" index="0"]
+shape = SubResource("SegmentShape2D_yj8or")
+
+[node name="Ground39" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(-16.75, -41.4)
+scale = Vector2(0.01, 2)
+
+[node name="Ground6" parent="Environment" instance=ExtResource("3_uc1s1")]
+position = Vector2(9.58, -45)
+scale = Vector2(0.01, 2)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-6.29, -729.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground4" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-2.84, -729.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="CollisionShape2D" parent="Environment/Ground4/StaticBody2D" index="0"]
+position = Vector2(-90, -0.999999)
+
+[node name="Sprite2D" parent="Environment/Ground4/StaticBody2D" index="1"]
+position = Vector2(-92, 0)
+flip_h = true
+
+[node name="Ground7" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-1.02, -702.2)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground8" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(1.15, -702.2)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground9" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-5.25, -58)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground10" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-2.83, -58)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(2.42, -84)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground2" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-45.31, -23.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground50" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-47.72, -23.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground51" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-50.19, -23.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground52" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-52.14, -23.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground11" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-7.6, -96.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground41" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-36.67, -43.2)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground42" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-34.56, -49.2)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground43" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-36.15, -53.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground44" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-34.79, -59.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground45" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-36.75, -60.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground46" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-34.75, -70.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground47" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-36.3, -72)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground48" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-34.83, -79.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground49" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-35.7, -81.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground12" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(6.35, -127.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground13" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-1.85, -140.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground14" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(0.57, -140.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground15" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-1.87, -210.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground16" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(0.55, -210.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground17" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-4.45, -263.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground18" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(4.83, -247.2)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground19" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(-0.38, -300.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground20" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(2.81, -338.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground21" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(5.29, -338.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground22" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(-6.48, -177)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground23" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-0.91, -372.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground24" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(-4.62, -414.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground25" parent="Environment" instance=ExtResource("9_m4i53")]
+position = Vector2(3.59, -413.8)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground26" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(-0.63, -455.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground27" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(-7.7, -498)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground28" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(-5.61, -498)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground29" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(3.62, -498.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground30" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(5.99, -498.6)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground31" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-4.08, -548.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground32" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-1.88, -548.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground33" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(0.32, -548.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground34" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(-1.68, -598)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground35" parent="Environment" instance=ExtResource("8_rc7hc")]
+position = Vector2(1.86, -625.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground36" parent="Environment" instance=ExtResource("11_ok47l")]
+position = Vector2(3.69, -625.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Ground37" parent="Environment" instance=ExtResource("8_57odj")]
+position = Vector2(6.43, -658.4)
+scale = Vector2(0.01, 0.2)
+
+[node name="Wind" parent="." instance=ExtResource("9_iuqw0")]
+position = Vector2(692, -1976)
+
+[node name="CollisionShape2D" parent="Wind/Area2D" index="0"]
+position = Vector2(-389, -34)
+
+[node name="ZombieAnt" parent="." instance=ExtResource("10_gjdbf")]
+position = Vector2(-266, -2205)
+
+[node name="Player" parent="." instance=ExtResource("1_2fvrs")]
+position = Vector2(-4287, 535)
+
+[node name="Water" parent="." instance=ExtResource("11_3ne07")]
+position = Vector2(-2430, 283)
+scale = Vector2(19, 13)
+
+[editable path="Environment/Ground40"]
+[editable path="Environment/Ground53"]
+[editable path="Environment/Ground4"]
+[editable path="Wind"]

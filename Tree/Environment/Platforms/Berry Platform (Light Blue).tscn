@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuepsoqd0rf8g"]
+
+[ext_resource type="Texture2D" uid="uid://cjyfvl1wur0i0" path="res://Sprites/Brighter Blue Berry Platform.png" id="1_21hdi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5rse"]
+size = Vector2(128.5, 38.8041)
+
+[node name="Ground" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, -1.5)
+scale = Vector2(2, 1.572)
+shape = SubResource("RectangleShape2D_l5rse")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_21hdi")
