@@ -19,6 +19,9 @@ var level = [
 	"res://Levels/Level 4-3.tscn",
 	"res://Levels/Level 4-4.tscn"
 ]
+
+#set this up on an individual scale for each world, design some world lock system
+
 var current_level = 1
 
 var playerStartPosition = Vector2()

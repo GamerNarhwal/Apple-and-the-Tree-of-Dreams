@@ -13,6 +13,7 @@ size = Vector2(128.5, 38.8041)
 position = Vector2(0.5, -1.5)
 scale = Vector2(2, 1.572)
 shape = SubResource("RectangleShape2D_l5rse")
+one_way_collision = true
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 scale = Vector2(2, 2)
