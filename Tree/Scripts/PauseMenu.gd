@@ -4,7 +4,7 @@ extends CanvasLayer
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 # Handles menu
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_accept") and not Global.isPaused:
 		if visible:
 			Global.isPaused = false
 			visible = false

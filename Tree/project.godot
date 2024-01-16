@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Basic Tree Platformer"
-run/main_scene="res://Levels/Main Scen.tscn"
+run/main_scene="res://Levels/Main_Hub.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 run/default_gravity=1960.0

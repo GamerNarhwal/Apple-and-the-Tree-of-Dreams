@@ -17,6 +17,7 @@ func _enter_tree():
 	Global.playerStartPosition = position
 	Global.currentCheckPoint = Global.playerStartPosition
 	position = Global.playerStartPosition
+
 	
 func updateAnimation():
 	animations.play("move_right")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyt2jw7to3pn"]
+[gd_scene load_steps=15 format=3 uid="uid://dyt2jw7to3pn"]
 
 [ext_resource type="PackedScene" uid="uid://cedvsie0gaiy8" path="res://Characters/Player.tscn" id="1_duo2n"]
 [ext_resource type="PackedScene" uid="uid://bp54dqccpv4rm" path="res://Environment/Platforms/Dirt.tscn" id="2_b3x8o"]
@@ -12,69 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://bnodckx1ebi40" path="res://Sprites/drive-download-20240113T154503Z-001/cloud.png" id="10_j7dcw"]
 [ext_resource type="Texture2D" uid="uid://bx7p7t5kpp4ti" path="res://Sprites/drive-download-20240113T154503Z-001/tree phalange_.png" id="11_pwl0s"]
 [ext_resource type="Texture2D" uid="uid://ugb7qwlysjrs" path="res://Sprites/drive-download-20240113T154503Z-001/cherry blossom.png" id="12_tb56t"]
+[ext_resource type="PackedScene" uid="uid://8myalisc8jx3" path="res://Environment/Hub Level Select/Tree World.tscn" id="13_8jdx3"]
+[ext_resource type="PackedScene" uid="uid://d3r6togh88tu3" path="res://Environment/Platforms/Bouncy Mushroom.tscn" id="14_8qone"]
 
 [node name="MainHub" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -4392.0
-offset_top = -1779.0
-offset_right = 113.0
-offset_bottom = 867.0
+offset_left = -4501.0
+offset_top = -1696.0
+offset_right = 4.0
+offset_bottom = 950.0
 color = Color(0.529412, 0.807843, 0.980392, 1)
 
 [node name="Dirt" parent="." instance=ExtResource("2_b3x8o")]
 position = Vector2(-3067, 534)
-scale = Vector2(10, 1)
-
-[node name="World One Start" type="Node2D" parent="."]
-position = Vector2(-3496, 240)
-
-[node name="ColorRect2" type="ColorRect" parent="World One Start"]
-offset_left = -226.0
-offset_top = -239.0
-offset_right = -48.0
-offset_bottom = 322.0
-color = Color(0.411765, 0.294118, 0.215686, 1)
-
-[node name="LevelExit" parent="World One Start" instance=ExtResource("3_csu6x")]
-position = Vector2(-136, 263)
-
-[node name="Ground" parent="World One Start" instance=ExtResource("4_h3ahh")]
-position = Vector2(-311, 103)
-
-[node name="Ground2" parent="World One Start" instance=ExtResource("5_lynkd")]
-
-[node name="Ground3" parent="World One Start" instance=ExtResource("5_lynkd")]
-position = Vector2(-234, -107)
-
-[node name="Ground4" parent="World One Start" instance=ExtResource("4_h3ahh")]
-position = Vector2(-343, -156)
-
-[node name="Ground5" parent="World One Start" instance=ExtResource("6_7svhn")]
-position = Vector2(-173, -177)
-
-[node name="Ground6" parent="World One Start" instance=ExtResource("7_awh7o")]
-position = Vector2(-77, -158)
-
-[node name="Ground7" parent="World One Start" instance=ExtResource("7_awh7o")]
-position = Vector2(-301, -205)
-
-[node name="Ground8" parent="World One Start" instance=ExtResource("7_awh7o")]
-position = Vector2(-200, -252)
-
-[node name="Ground9" parent="World One Start" instance=ExtResource("7_awh7o")]
-position = Vector2(-70, -220)
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="World One Start"]
-offset_left = -174.0
-offset_top = 187.0
-offset_right = -80.0
-offset_bottom = 215.0
-text = "Tree World
-"
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_duo2n")]
-position = Vector2(-2405, 443)
+scale = Vector2(20, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = -3230.0
@@ -138,3 +90,57 @@ flip_v = true
 position = Vector2(-3367, 472)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_tb56t")
+
+[node name="World One Start" type="Node2D" parent="."]
+position = Vector2(-3496, 240)
+
+[node name="ColorRect2" type="ColorRect" parent="World One Start"]
+offset_left = -226.0
+offset_top = -239.0
+offset_right = -48.0
+offset_bottom = 322.0
+color = Color(0.411765, 0.294118, 0.215686, 1)
+
+[node name="Ground" parent="World One Start" instance=ExtResource("4_h3ahh")]
+position = Vector2(-311, 103)
+
+[node name="Ground2" parent="World One Start" instance=ExtResource("5_lynkd")]
+
+[node name="Ground3" parent="World One Start" instance=ExtResource("5_lynkd")]
+position = Vector2(-234, -107)
+
+[node name="Ground4" parent="World One Start" instance=ExtResource("4_h3ahh")]
+position = Vector2(-343, -156)
+
+[node name="Ground5" parent="World One Start" instance=ExtResource("6_7svhn")]
+position = Vector2(-173, -177)
+
+[node name="Ground6" parent="World One Start" instance=ExtResource("7_awh7o")]
+position = Vector2(-77, -158)
+
+[node name="Ground7" parent="World One Start" instance=ExtResource("7_awh7o")]
+position = Vector2(-301, -205)
+
+[node name="Ground8" parent="World One Start" instance=ExtResource("7_awh7o")]
+position = Vector2(-200, -252)
+
+[node name="Ground9" parent="World One Start" instance=ExtResource("7_awh7o")]
+position = Vector2(-70, -220)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="World One Start"]
+offset_left = -174.0
+offset_top = 187.0
+offset_right = -80.0
+offset_bottom = 215.0
+text = "Tree World
+"
+
+[node name="TreeWorld" parent="World One Start" instance=ExtResource("13_8jdx3")]
+position = Vector2(-140, 260)
+
+[node name="BouncyMushroom" parent="." instance=ExtResource("14_8qone")]
+position = Vector2(-2100, 494)
+scale = Vector2(0.25, 0.25)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_duo2n")]
+position = Vector2(-3159, 156)

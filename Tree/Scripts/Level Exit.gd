@@ -11,12 +11,14 @@ func _process(_delta):
 	pass
 
 
-func _on_player_entered(_body):
-	var button = $Area2D.find_child("Ebutton")
-	button.visible = true
-	Global.atExit = true
+func _on_player_entered(body):
+	if body is Player:
+		var button = $Area2D.find_child("Ebutton")
+		button.visible = true
+		Global.atExit = true
 
-func _on_player_exited(_body):
-	var button = $Area2D.find_child("Ebutton")
-	button.visible = false
-	Global.atExit = false
+func _on_player_exited(body):
+	if body is Player:
+		var button = $Area2D.find_child("Ebutton")
+		button.visible = false
+		Global.atExit = false

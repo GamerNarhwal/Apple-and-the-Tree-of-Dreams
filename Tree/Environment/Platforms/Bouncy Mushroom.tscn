@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3r6togh88tu3"]
+
+[ext_resource type="Script" path="res://Environment/Platforms/bounce.gd" id="1_45ua7"]
+[ext_resource type="Texture2D" uid="uid://gbvqxe06mtp8" path="res://Sprites/drive-download-20240113T154503Z-001/mushroom stem.png" id="1_jm8k4"]
+[ext_resource type="Texture2D" uid="uid://bcxw7eumpw6yr" path="res://Sprites/drive-download-20240113T154503Z-001/weird mushroom (1).png" id="2_q7ou8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhepa"]
+size = Vector2(1030, 298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onjo1"]
+size = Vector2(1029, 251)
+
+[node name="BouncyMushroom" type="Node2D"]
+script = ExtResource("1_45ua7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+position = Vector2(23, -303)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(-2, -21)
+shape = SubResource("RectangleShape2D_xhepa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(23.5, -301.5)
+shape = SubResource("RectangleShape2D_onjo1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_jm8k4")
+
+[node name="WeirdMushroom(1)" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(23, -303)
+texture = ExtResource("2_q7ou8")
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_exited"]

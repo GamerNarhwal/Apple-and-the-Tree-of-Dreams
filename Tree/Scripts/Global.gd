@@ -29,6 +29,7 @@ var currentCheckPoint = Vector2()
 
 var isPaused = false
 var atExit = false
+var is_in_menu = false
 
 var furthestLevel = 1
 

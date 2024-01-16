@@ -46,7 +46,7 @@ _data = {
 "move_right": SubResource("Animation_8v1n5")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_bf66l")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
@@ -133,72 +133,6 @@ offset_top = 294.0
 offset_right = 507.0
 offset_bottom = 382.0
 text = "Menu Exit"
-
-[node name="Tree World Levels" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Tree World Levels"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
-
-[node name="Coastal World Levels" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Coastal World Levels"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
-
-[node name="Water World Levels" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Water World Levels"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
-
-[node name="Grassland World Levels" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Grassland World Levels"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
-
-[node name="Tundra World" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Tundra World"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
-
-[node name="Home Forest World?" type="CanvasLayer" parent="Camera2D3"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D3/Home Forest World?"]
-offset_left = 47.0
-offset_top = 38.0
-offset_right = 116.0
-offset_bottom = 109.0
-scale = Vector2(26.2411, 14.1095)
-color = Color(1, 1, 1, 0.596078)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D3")
