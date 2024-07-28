@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cedvsie0gaiy8"]
+[gd_scene load_steps=10 format=3 uid="uid://cedvsie0gaiy8"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_bf66l"]
 [ext_resource type="Texture2D" uid="uid://tdajnq1u7dc6" path="res://Sprites/Sprite-0001-sheet.png" id="2_oj2u1"]
@@ -46,6 +46,9 @@ _data = {
 "move_right": SubResource("Animation_8v1n5")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_red05"]
+radius = 16.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_bf66l")
 
@@ -56,16 +59,16 @@ texture = ExtResource("2_oj2u1")
 hframes = 8
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_qsuaj")
 
 [node name="Camera2D3" type="Camera2D" parent="."]
-position = Vector2(12, 122)
+position = Vector2(12, 163)
 offset = Vector2(0, -150)
-limit_left = -10000
-limit_top = -4000
-limit_right = 1000
-limit_bottom = 750
+zoom = Vector2(3, 3)
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Pause Menu" type="CanvasLayer" parent="Camera2D3"]
 visible = false
@@ -139,6 +142,12 @@ root_node = NodePath("../Sprite2D3")
 libraries = {
 "": SubResource("AnimationLibrary_rurup")
 }
+
+[node name="ClimbDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClimbDetector"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_red05")
 
 [connection signal="pressed" from="Camera2D3/Pause Menu/Resume" to="Camera2D3/Pause Menu" method="_on_resume_pressed"]
 [connection signal="pressed" from="Camera2D3/Pause Menu/Exit" to="Camera2D3/Pause Menu" method="_on_exit_pressed"]

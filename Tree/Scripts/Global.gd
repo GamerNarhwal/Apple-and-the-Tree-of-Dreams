@@ -33,8 +33,10 @@ var is_in_menu = false
 
 var furthestLevel = 1
 
-var run_speed = 450
-var jump_force = -1000.0 
+var run_speed = 15000
+var climb_speed = 5000
+var jump_force = -25000.0 
+var jump_boost = 100
 var gravity_scale = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var last_non_zero_direction

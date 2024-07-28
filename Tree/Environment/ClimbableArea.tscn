@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfuuq88yuo8ew"]
+
+[ext_resource type="Script" path="res://Scripts/ClimbableArea.gd" id="1_qb6hl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuyp7"]
+size = Vector2(133, 20)
+
+[node name="ClimbableArea" type="Node2D" groups=["ClimbableAreas"]]
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 1
+script = ExtResource("1_qb6hl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 1
+scale = Vector2(0.21, 1)
+shape = SubResource("RectangleShape2D_xuyp7")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
