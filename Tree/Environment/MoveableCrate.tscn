@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dftrjyuuvaimw"]
+
+[ext_resource type="Script" path="res://Environment/MoveableCrate.gd" id="1_lcau1"]
+[ext_resource type="Texture2D" uid="uid://c5xr47kocljrb" path="res://Sprite Sheets/Untitled 07-12-2024 08-47-57 (7) (1).png" id="2_vler6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hknd8"]
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb0h4"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+angular_velocity = 0.208218
+script = ExtResource("1_lcau1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vler6")
+hframes = 36
+vframes = 36
+frame = 396
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hknd8")
+
+[node name="RayRight" type="RayCast2D" parent="."]
+target_position = Vector2(24, 0)
+
+[node name="RayLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-24, 0)
+
+[node name="RayBottom" type="RayCast2D" parent="."]
+target_position = Vector2(0, 24)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kb0h4")

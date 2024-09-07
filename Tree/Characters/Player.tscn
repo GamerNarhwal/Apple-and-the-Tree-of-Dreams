@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cedvsie0gaiy8"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_bf66l"]
-[ext_resource type="Texture2D" uid="uid://tdajnq1u7dc6" path="res://Sprites/Sprite-0001-sheet.png" id="2_oj2u1"]
+[ext_resource type="Texture2D" uid="uid://o3h5p8b1q1dn" path="res://Sprite Sheets/Untitled 08-01-2024 06-26-29 (1).png" id="2_23f7c"]
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="3_7poxc"]
 [ext_resource type="Script" path="res://Scripts/Level Finish.gd" id="4_jiene"]
 
@@ -49,13 +49,13 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_red05"]
 radius = 16.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_bf66l")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(0, 2.38419e-07)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_oj2u1")
+position = Vector2(3, -4)
+scale = Vector2(0.341797, 0.341797)
+texture = ExtResource("2_23f7c")
 hframes = 8
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
@@ -65,7 +65,6 @@ shape = SubResource("CircleShape2D_qsuaj")
 [node name="Camera2D3" type="Camera2D" parent="."]
 position = Vector2(12, 163)
 offset = Vector2(0, -150)
-zoom = Vector2(3, 3)
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
@@ -146,7 +145,6 @@ libraries = {
 [node name="ClimbDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClimbDetector"]
-position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_red05")
 
 [connection signal="pressed" from="Camera2D3/Pause Menu/Resume" to="Camera2D3/Pause Menu" method="_on_resume_pressed"]
